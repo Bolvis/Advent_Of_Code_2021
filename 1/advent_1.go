@@ -13,19 +13,19 @@ func main() {
 		fmt.Println(err)
 		panic(err)
 	}
-	f_body := string(f)
+	fBody := string(f)
 
-	f_arr := strings.Split(f_body, "\n")
+	fArr := strings.Split(fBody, "\n")
 
 	var result int32
 
-	for index, line := range f_arr {
+	for index, line := range fArr {
 		if index == 0 {
 			continue
 		}
-		line_v, _ := strconv.Atoi(line)
-		prev_line_v, _ := strconv.Atoi(f_arr[index-1])
-		if line_v > prev_line_v {
+		lineV, _ := strconv.Atoi(line)
+		prevLineV, _ := strconv.Atoi(fArr[index-1])
+		if lineV > prevLineV {
 			result++
 		}
 	}

@@ -13,26 +13,26 @@ func main() {
 		fmt.Println(err)
 		panic(err)
 	}
-	f_body := string(f)
+	fBody := string(f)
 
-	f_arr := strings.Split(f_body, "\n")
+	fArr := strings.Split(fBody, "\n")
 
 	var x int
 	var y int
 
-	for _, line := range f_arr {
-		line_command_value := strings.Fields(line)
-		if len(line_command_value) == 0 {
+	for _, line := range fArr {
+		lineCommandValue := strings.Fields(line)
+		if len(lineCommandValue) == 0 {
 			continue
 		}
-		value, _ := strconv.Atoi(line_command_value[1])
-		if line_command_value[0] == "forward" {
+		value, _ := strconv.Atoi(lineCommandValue[1])
+		if lineCommandValue[0] == "forward" {
 			x += value
 		}
-		if line_command_value[0] == "up" {
+		if lineCommandValue[0] == "up" {
 			y -= value
 		}
-		if line_command_value[0] == "down" {
+		if lineCommandValue[0] == "down" {
 			y += value
 		}
 	}
