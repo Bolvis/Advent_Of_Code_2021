@@ -7,7 +7,7 @@
 <table>
     <tr>
         <td>Task One</td>    
-        <td>⭐</td>     
+        <td>⭐⭐</td>     
     </tr>
     <tr>
         <td>Task Two</td>    
